@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Dinámica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .image-container {
+      margin: 20px 0;
+    }
+
+    img {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bienvenido a mi sitio web</h1>
+
+  <div class="image-container">
+    <img id="miImagen" src="https://picsum.photos/400/250?random=1" alt="Imagen dinámica">
+  </div>
+
+  <button onclick="cambiarImagen()">Cambiar imagen</button>
+
+  <script>
+    // Función en JavaScript para agregar dinamismo
+    function cambiarImagen() {
+      const img = document.getElementById('miImagen');
+      const randomId = Math.floor(Math.random() * 1000);
+      img.src = `https://picsum.photos/400/250?random=${randomId}`;
+    }
+  </script>
+
+</body>
+</html>
